@@ -33,9 +33,9 @@ public class RecyclingGUI extends JFrame implements ActionListener, ReceiptPrint
 			theRecyclingMachine.itemReceived(2);
 		} else if(e.getSource().equals(slot3)) { 
 			theRecyclingMachine.itemReceived(3);
-		} else if(e.getSource().equals(receipt)) { 
-			theRecyclingMachine.printReceipt();
 		} else if(e.getSource().equals(slot4)) {
+			theRecyclingMachine.itemReceived(4);
+		} else if(e.getSource().equals(receipt)) { 
 			theRecyclingMachine.printReceipt();
 		}
 	}
@@ -72,7 +72,8 @@ public class RecyclingGUI extends JFrame implements ActionListener, ReceiptPrint
 		
 		slot1.addActionListener(this); 
 		slot2.addActionListener(this); 
-		slot3.addActionListener(this); 
+		slot3.addActionListener(this);
+		slot4.addActionListener(this);
 
 		panel.add(receipt); 
 		receipt.addActionListener(this); 
