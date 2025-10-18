@@ -3,6 +3,7 @@ package com.perisic.beds.peripherals;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import java.awt.*;
 
 import com.perisic.beds.recycling.CustomerPanel;
 import com.perisic.beds.recycling.ReceiptPrinter;
@@ -43,6 +44,7 @@ public class RecyclingGUI extends JFrame implements ActionListener, ReceiptPrint
 	JButton slot2 = new JButton("Bottle"); 
 	JButton slot3 = new JButton("Crate");
 	JButton slot4 = new JButton("Book");
+	
 
 	JButton receipt = new JButton("Receipt"); 
 	JTextArea outputWindow = new JTextArea(10,25);
@@ -55,12 +57,19 @@ public class RecyclingGUI extends JFrame implements ActionListener, ReceiptPrint
 		super();
 		setSize(350,350);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		
+		//receipt button style change
+	    receipt.setBackground(Color.BLACK);
+	    receipt.setForeground(Color.WHITE);
+	    receipt.setOpaque(true);
+	    receipt.setBorderPainted(false);
+		
 		JPanel panel = new JPanel(); 
 		panel.add(slot1); 
 		panel.add(slot2);
 		panel.add(slot3);
 		panel.add(slot4);
-
+		
 		slot1.addActionListener(this); 
 		slot2.addActionListener(this); 
 		slot3.addActionListener(this); 

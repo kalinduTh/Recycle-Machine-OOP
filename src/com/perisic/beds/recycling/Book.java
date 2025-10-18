@@ -1,7 +1,7 @@
 package com.perisic.beds.recycling;
 
 /**
- * 
+ * Representing Books
  * @author Kalindu Tharanga
  *
  */
